@@ -32,3 +32,5 @@ If you don't wanna do that, you can manually update these values
 ZSH_THEME="amnastic"
 ZSH_CUSTOM="${HOME}/.oh-my-zsh-custom"
 ```
+
+![screenshot amnastic.zsh-theme](https://github.com/aamnah/oh-my-zsh-custom/blob/master/amnastic.zsh-theme.png?raw=true)
