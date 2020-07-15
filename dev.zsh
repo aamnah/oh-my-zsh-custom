@@ -6,6 +6,9 @@ dev_frn() {
   # change to project directory
   cd ${SITES_FOLDER}/fppreactnative
 
+  # open in VS Code
+  code . &
+
   # run Android emulator in background (that's what the `&` at the end is for)
   # emulator @Pixel_3a_API_29 &
 
@@ -33,10 +36,10 @@ dev () {
     echo -e "\n you can only open 1 project for development with this command"
     return 1
 
-  elif [ "$1" = "-h" ] || [ "$1" == "--help" ]; then
+  elif [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
     echo -e "\n pass a project name to the dev command. e.g. dev frn \n the projects you have are: \n frn"
 
-  elif [[ "$1" = "frn" ]]; then
+  elif [[ "$1" == "frn" ]]; then
     dev_frn
   fi
 }
