@@ -35,7 +35,7 @@ ZSH_CUSTOM="${HOME}/.oh-my-zsh-custom"
 
 ![screenshot amnastic.zsh-theme](https://github.com/aamnah/oh-my-zsh-custom/blob/master/amnastic.zsh-theme.png?raw=true)
 
-
+Files in the custom/ directory will be automatically loaded by the init script, in alphabetical order.
 
 aliases.zsh
 ---
