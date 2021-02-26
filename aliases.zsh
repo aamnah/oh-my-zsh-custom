@@ -3,8 +3,8 @@
 
 # Author: Aamnah <hello@aamnah.com> @AamnahAkram
 # Link: https://aamnah.com
-# Version: 0.3
-# lastmod: 2020-07-15
+# Version: 0.4
+# lastmod: 2021-02-26
 
 # take a look at http://alias.sh/
 # for some really cool aliases
