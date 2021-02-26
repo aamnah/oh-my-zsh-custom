@@ -99,4 +99,3 @@ functions.zsh
 - `spy()` identify and search for active network connections
 - `sniff()` sniff GET and POST traffic over http v2
 - `bell()` Ring the system bell after finishing a script/compile
-- `jpost` Create new Jekyll posts
