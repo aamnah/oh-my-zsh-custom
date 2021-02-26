@@ -5,6 +5,10 @@ This repo contains my `custom` folder for _oh-my-zsh_. Mainly, i have the `amnas
 ### install
 
 ```bash
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# download custom theme and rename the folder to make it hidden
 cd
 git clone git@github.com:aamnah/oh-my-zsh-custom.git
 mv oh-my-zsh-custom .oh-my-zsh-custom
