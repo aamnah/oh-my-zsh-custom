@@ -10,26 +10,37 @@
 # for some really cool aliases
 # http://www.commandlinefu.com/commands/
 
+# Detect the platform we're running on (Linux / macOS) with $OSTYPE so we can alter the commands accordingly
 
 ## DIRs
 #----------------------------------------------------------
 alias desk='cd ~/Desktop'
 alias dl='cd ~/Downloads'
 
-SITES_FOLDER='/media/aamnah/Files/Sites'
-PROJECTS_FOLDER='/media/aamnah/Files/Projects'
+SITES_FOLDER='~/Sites'
+PROJECTS_FOLDER='~/Projects'
+TEMPORARY_FOLDER='~/tmp'
 
 alias proj="cd ${PROJECTS_FOLDER}"
 alias sites="cd ${SITES_FOLDER}"
-
+alias tmp="cd ${TEMPORARY_FOLDER}"
 
 # COMMANDS & TOOLS
 #----------------------------------------------------------
 alias ls='ls -hF'
-alias ll='ls -alhF --color' # -a for all, -l for detailed, -h for human readable, F for trailing /, --color for color coding
-alias lsd='ls -Gal | grep ^d' # Only list directories, including hidden ones
-alias la='ls -A'
-alias l='ls -aFx --color' # -x for line based listing instead of columns
+# alias ll='ls -alhF --color' # -a for all, -l for detailed, -h for human readable, F for trailing /, --color for color coding
+# -A List all entries except for . and ...  Always set for the super-user.
+# -F Display indicators. a slash (`/') immediately after each pathname that is a directory,
+            #  an asterisk (`*') after each that is executable, an at sign (`@') after
+            #  each symbolic link, an equals sign (`=') after each socket, a percent sign
+            #  (`%') after each whiteout, and a vertical bar (`|') after each that is a FIFO.
+# Colorized output is -G on macOS and --color on Linux (Ubuntu)
+# -h is for human readable, print sizes like 1K 234M 2.3G etc.
+
+# use -G if macOS, --color if Linux (Ubuntu)
+[[ $OSTYPE = darwin* ]] && alias ll='ls -AlFGh' || alias ll='ls -AlhF --color'
+alias lsd='ls -GAl | grep ^d' # Only list directories, including hidden ones
+alias l='ls -AFGhx' # -x for line based listing instead of columns. the multi-column output is produced with entries sorted across, rather than down, the columns
 
 # Always list the tree command in color coding
 alias tree='tree -C'
@@ -43,8 +54,8 @@ alias grep='grep --color=auto'
 alias ydl='youtube-dl'
 
 # run ssh-agent and load SSH key
-SSH_KEY='/media/aamnah/Files/.ssh/foo'
-alias gath="eval $(ssh-agent) && ssh-add ${SSH_KEY}"
+# SSH_KEY='/media/aamnah/Files/.ssh/foo'
+# alias gath="eval $(ssh-agent) && ssh-add ${SSH_KEY}"
 
 
 # MISC.
@@ -111,5 +122,3 @@ fi
 alias netlisteners='lsof -i -P | grep LISTEN'
 
 # spy() and sniff() have been added to .functions
-
-
